@@ -1,10 +1,10 @@
-# xero-ruby
+# xero-<sdk-language>
 [![SDK Version](https://badge.fury.io/rb/xero-ruby.svg)](https://badge.fury.io/rb/xero-ruby)
 [![Github forks](https://img.shields.io/github/forks/XeroAPI/xero-ruby.svg)](https://github.com/XeroAPI/xero-ruby/network)
 [![Github stars](https://img.shields.io/github/stars/XeroAPI/xero-ruby.svg)](https://github.com/XeroAPI/xero-ruby/stargazers)
 ![total downloads](https://ruby-gem-downloads-badge.herokuapp.com/xero-ruby?type=total)
 
-The **sdk-name** SDK makes it easy for developers to access Xero's APIs in their **language** code, and build robust applications and software using small business & general ledger accounting data.
+The **sdk-language** SDK makes it easy for developers to access Xero's APIs in their **language** code, and build robust applications and software using small business & general ledger accounting data.
 # Table of Contents
 - [API Client documentation](#api-client-documentation)
 - [Sample Applications](#sample-applications)
