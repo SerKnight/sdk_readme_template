@@ -17,7 +17,7 @@ The **sdk-language** SDK makes it easy for developers to access Xero's APIs in t
 - [Helper Methods](#helper-methods)
 - [Usage Examples](#usage-examples)
 - [SDK conventions](#sdk-conventions)
-- [Contributing](#contributing)
+- [Participating in Xero’s developer community](#participating-in-xeros-developoer-community)
 
 <hr>
 
@@ -84,7 +84,7 @@ How to setup:
 
 ---
 ## Authentication
-All API requests go through Xero's OAuth2.0 gateway and require a valid `access_token` to be set on the `client` which appends the `access_token` [JWT](https://jwt.io/) to the header of each request.
+All API requests go through Xero's OAuth 2.0 gateway and require a valid `access_token` to be set on the `client` which appends the `access_token` [JWT](https://jwt.io/) to the header of each request.
 
 If you are making an API call for the first time:
 
@@ -95,7 +95,7 @@ If you are making an API call for the first time:
 - exchange callback
 ```
 
-It is reccomended that you store this token set JSON in a datastore in relation to the user who has authenticated the Xero API connection. Each time you want to call the Xero API, you will need to access the previously generated token set, initialize it on the SDK `client`, and refresh the `access_token` prior to making API calls.
+It is recommended that you store this token set JSON in a datastore in relation to the user who has authenticated the Xero API connection. Each time you want to call the Xero API, you will need to access the previously generated token set, initialize it on the SDK `client`, and refresh the `access_token` prior to making API calls.
 
 **TODO: Make sure this is accurate for SDK (Java handles differently)**
 
@@ -125,7 +125,7 @@ Example Token Set JSON:
 ---
 ## Custom Connections 
 
-Custom Connections are a Xero [premium option](https://developer.xero.com/documentation/oauth2/custom-connections) used for building M2M integrations to a single organisation. A custom connection uses OAuth2.0's [`client_credentis`](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) grant which eliminates the step of exchanging the temporary code for a token set.
+Custom Connections are a Xero [premium option](https://developer.xero.com/documentation/oauth2/custom-connections) used for building M2M integrations to a single organisation. A custom connection uses OAuth 2.0's [`client_credentials`](https://www.oauth.com/oauth2-servers/access-tokens/client-credentials/) grant which eliminates the step of exchanging the temporary code for a token set.
 
 To use this SDK with a Custom Connections:
 ```
@@ -146,7 +146,7 @@ Because Custom Connections are only valid for a single organisation you don't ne
 
 **TODO: Make sure this is accurate for SDK (Java does not require xero-tenant id on ever api call)**
 
-> Becuase the SDK is generated from the OpenAPI spec the parameter remains. For now you are required to pass an empty string to use this SDK with a Custom Connection.
+> Because the SDK is generated from the OpenAPI spec the parameter remains. For now you are required to pass an empty string to use this SDK with a Custom Connection.
 
 ---
 ## API Clients
@@ -215,13 +215,13 @@ tenant_id = client.connections[0].tenantId
 
 ### < TODO SDK Feature Name >
 ```
-  - descibe any nuance in the SDK 
+  - describe any nuance in the SDK 
   - ex, all currencies are treated as BigDecimal objects..
 ```
 
 ### Querying & Filtering
 
-Descibe the support for query options and filtering
+Describe the support for query options and filtering
 
 ```ruby
 - opts
@@ -246,15 +246,6 @@ Descibe the support for query options and filtering
 ```
 
 ---
-## Contributing
-PRs, issues, and discussion are highly appreciated and encouraged. Note that the majority of this project is generated code based on [Xero's OpenAPI specs](https://github.com/XeroAPI/Xero-OpenAPI) - PR's will be evaluated and pre-merge will be incorporated into the root generation templates.
-
-
-### < TODO - add section about how to run test suite, or add new unit tests >
-
-### Versioning
-We do our best to keep OS industry `semver` standards, but we can make mistakes! If something is not accurately reflected in a version's release notes please let the team know.
-
 
 ## Participating in Xero’s developer community
 
@@ -262,10 +253,17 @@ This SDK is one of a number of SDK’s that the Xero Developer team builds and m
 
 Here are a few things you should be aware of as a contributor:
 * Xero has adopted the Contributor Covenant [Code of Conduct](https://github.com/XeroAPI/xero-ruby/blob/master/CODE_OF_CONDUCT.md), we expect all contributors in our community to adhere to it
-* If you raise an issue then please make sure to fill out the github issue template, doing so helps us help you 
+* If you raise an issue then please make sure to fill out the Github issue template, doing so helps us help you 
 * You’re welcome to raise PRs. As our SDKs are generated we may use your code in the core SDK build instead of merging your code
 * We have a [contribution guide](https://github.com/XeroAPI/xero-ruby/blob/master/CONTRIBUTING.md) for you to follow when contributing to this SDK
 * Curious about how we generate our SDK’s? Have a [read of our process](https://devblog.xero.com/building-sdks-for-the-future-b79ff726dfd6) and have a look at our [OpenAPISpec](https://github.com/XeroAPI/Xero-OpenAPI)
 * This software is published under the [MIT License](https://github.com/XeroAPI/xero-ruby/blob/master/LICENSE)
 
 For questions that aren’t related to SDKs please refer to our [developer support page](https://developer.xero.com/support/).
+
+### Contributing
+PRs, issues, and discussion are highly appreciated and encouraged. Note that the majority of this project is generated code based on [Xero's OpenAPI specs](https://github.com/XeroAPI/Xero-OpenAPI) - PR's will be evaluated and pre-merge will be incorporated into the root generation templates.
+
+### < TODO - add section about how to run test suite, or add new unit tests >
+### Versioning
+We do our best to keep OS industry `semver` standards, but we can make mistakes! If something is not accurately reflected in a version's release notes please let the team know.
