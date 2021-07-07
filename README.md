@@ -142,7 +142,7 @@ Show config setup:
 - ex: client.accounting_api.get_invoices('').invoices
 ```
 
-Because Custom Connections are only valid for a single organisation you don't need to pass the `xero-tenant-id` as the first parameter to every method.
+Because Custom Connections are only valid for a single organisation you don't need to pass the xero-tenant-id as the first parameter to every method, or more specifically for this SDK xeroTenantId can be an empty string.
 
 **TODO: Make sure this is accurate for SDK (Java does not require xero-tenant id on ever api call)**
 
